@@ -1,0 +1,13 @@
+street,avoid_CER-only,forg_CER-only,avoid_Full,forg_Full,units,loo_ratio_CER-only,loo_ratio_Full
+East Bay Street,0.0,58.37,0.0,60.3,30,2.85,3.17
+Huger Street,0.0,46.0,0.0,46.0,6,3.46,3.88
+Lockwood Drive,0.0,11.28,0.0,11.28,2,5.19,5.6
+King Street,0.0,0.0,0.0,5.83,6,5.75,5.87
+L-NovDec,0.0,0.0,0.0,0.56,1,5.75,6.14
+Fishburne Street,0.0,0.0,0.0,0.0,2,5.75,6.16
+Calhoun Street,0.0,0.0,0.0,0.0,2,5.75,6.16
+East Battery,17.5,0.0,17.5,0.0,6,44.31,47.5
+L-Jan,0.0,0.0,0.0,0.0,1,5.75,6.16
+L-Android,0.9,0.0,0.9,0.0,1,6.02,6.45
+L-Oct,0.0,0.0,0.0,0.0,1,5.75,6.16
+Main,1.71,0.0,1.71,0.0,2,6.29,6.74

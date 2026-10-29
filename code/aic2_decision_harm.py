@@ -50,3 +50,15 @@ for lvl, groups in [("street", cl), ("stretch", d.stretch.values)]:
         res.append(dict(cluster=lvl, n_clusters=len(u), contrast=f"{a_} - {b_}", mean=round(diff.mean(), 2),
                         lo=round(np.percentile(bs, 2.5), 2), hi=round(np.percentile(bs, 97.5), 2)))
 r = pd.DataFrame(res); r.to_csv(X.OUT / "DH_cluster_bootstrap.csv", index=False); print(r.to_string(index=False))
+# per-cluster contributions and leave-one-cluster-out ratios (forgone benefit / avoided harm)
+pc = []
+for lab, a in [("CER-only", acc["CER-only"]), ("Full", acc["Full"])]:
+    d["avoid_" + lab] = np.where(~a, np.clip(d.dB_cand - d.dB_frozen, 0, None), 0)
+    d["forg_" + lab] = np.where(~a, np.clip(d.dB_frozen - d.dB_cand, 0, None), 0)
+g = d.groupby("street")[["avoid_CER-only", "forg_CER-only", "avoid_Full", "forg_Full"]].sum()
+g["units"] = d.groupby("street").size()
+for c in g.index:
+    h = g.drop(c).sum()
+    g.loc[c, "loo_ratio_CER-only"] = h["forg_CER-only"] / h["avoid_CER-only"] if h["avoid_CER-only"] > 0 else np.inf
+    g.loc[c, "loo_ratio_Full"] = h["forg_Full"] / h["avoid_Full"] if h["avoid_Full"] > 0 else np.inf
+g = g.round(2).sort_values("forg_Full", ascending=False); g.to_csv(X.OUT / "DH_cluster_contrib.csv"); print(g.to_string())
