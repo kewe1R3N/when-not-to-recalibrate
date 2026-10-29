@@ -1,0 +1,74 @@
+street,pass_a,pass_b,pass,row_from,row_to
+Calhoun Street,i18,a13,i18,835,9285
+Calhoun Street,i18,a13,a13,779,9244
+East Battery,i15,a15,i15,663,1623
+East Battery,i15,a15,a15,1815,2843
+East Battery,i15,a22,i15,663,1623
+East Battery,i15,a22,a22,664,1614
+East Battery,a15,a22,a15,1815,2843
+East Battery,a15,a22,a22,664,1614
+East Bay Street,i3,a1,i3,395,1345
+East Bay Street,i3,a1,a1,170,986
+East Bay Street,i3,a10,i3,95,1345
+East Bay Street,i3,a10,a10,71,1334
+East Bay Street,i6,a7,i6,156,2246
+East Bay Street,i6,a7,a7,317,3021
+East Bay Street,i6,a20,i6,156,2246
+East Bay Street,i6,a20,a20,264,2348
+East Bay Street,i12,a1,i12,45,985
+East Bay Street,i12,a1,a1,47,986
+East Bay Street,i12,a10,i12,175,985
+East Bay Street,i12,a10,a10,371,1334
+East Bay Street,i15,a15,i15,1553,2823
+East Bay Street,i15,a15,a15,233,1897
+East Bay Street,i15,a22,i15,1553,2823
+East Bay Street,i15,a22,a22,1544,2764
+East Bay Street,i16,a7,i16,109,2469
+East Bay Street,i16,a7,a7,117,2474
+East Bay Street,i16,a20,i16,319,2469
+East Bay Street,i16,a20,a20,446,2348
+East Bay Street,a1,a10,a1,170,986
+East Bay Street,a1,a10,a10,371,1334
+East Bay Street,a7,a20,a7,317,3021
+East Bay Street,a7,a20,a20,264,2348
+East Bay Street,a15,a22,a15,233,1897
+East Bay Street,a15,a22,a22,1544,2764
+Fishburne Street,i7,a5,i7,6294,7083
+Fishburne Street,i7,a5,a5,3748,4574
+Huger Street,i5,a16,i5,595,5233
+Huger Street,i5,a16,a16,414,5039
+Huger Street,i5,a23,i5,595,5233
+Huger Street,i5,a23,a23,158,5028
+Huger Street,a16,a23,a16,414,5039
+Huger Street,a16,a23,a23,158,5028
+King Street,i2,a2,i2,601,1921
+King Street,i2,a2,a2,619,1901
+King Street,i9,a11,i9,307,2195
+King Street,i9,a11,a11,566,2456
+King Street,i11,a12,i11,158,588
+King Street,i11,a12,a12,161,583
+King Street,i13,a11,i13,20,80
+King Street,i13,a11,a11,2696,2746
+King Street,i14,a14,i14,62,1582
+King Street,i14,a14,a14,0,11
+King Street,i14,a14,a14,72,1594
+King Street,i20,a21,i20,99,759
+King Street,i20,a21,a21,103,783
+Lockwood Drive,i7,a5,i7,3083,3434
+Lockwood Drive,i7,a5,i7,3503,4474
+Lockwood Drive,i7,a5,i7,4603,4763
+Lockwood Drive,i7,a5,i7,4823,5194
+Lockwood Drive,i7,a5,i7,5234,5354
+Lockwood Drive,i7,a5,a5,471,876
+Lockwood Drive,i7,a5,a5,966,1996
+Lockwood Drive,i7,a5,a5,2096,2265
+Lockwood Drive,i7,a5,a5,2305,2841
+Morrison Drive,i4,a3,i4,246,836
+Morrison Drive,i4,a3,a3,58,638
+Morrison Drive,i4,a8,i4,1496,1926
+Morrison Drive,i4,a8,a8,402,762
+Morrison Drive,a3,a8,a3,1310,1666
+Morrison Drive,a3,a8,a3,1678,1788
+Morrison Drive,a3,a8,a8,402,762
+Murray Boulevard,i17,a18,i17,891,1431
+Murray Boulevard,i17,a18,a18,820,1350

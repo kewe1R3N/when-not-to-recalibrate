@@ -1,0 +1,65 @@
+street,category,direction,n_cal,n_eval,whole_audit,status,n_A,n_B,CER_A_frozen,CER_A_cand,CER_B_frozen,CER_B_cand,dB_frozen,dB_cand,update_on_B,CERonly_accepts,hold,Full_accepts,dev_B_Never,dev_B_Always,dev_B_CER-only,dev_B_Full,dev_B_Oracle
+Calhoun Street,S,i18->a13,1668,1670,accept,split,823.0,823.0,0.1191,0.0,0.045,0.0,3.5,1.0,beneficial,True,False,True,3.5,1.0,1.0,1.0,1.0
+Calhoun Street,S,a13->i18,1670,1668,accept,split,822.0,822.0,0.045,0.0158,0.1022,0.0292,9.22,1.92,beneficial,True,False,True,9.22,1.92,1.92,1.92,1.92
+East Battery,S,i15->a15,169,183,refuse,split,79.0,80.0,0.1392,0.2405,0.15,0.3,14.0,29.0,harmful,False,False,False,14.0,29.0,14.0,14.0,14.0
+East Battery,S,a15->i15,183,169,tie,split,72.0,73.0,0.0,0.0,0.0,0.0,1.0,1.0,neutral,False,True,False,1.0,1.0,1.0,1.0,1.0
+East Battery,S,i15->a22,169,167,refuse,split,71.0,72.0,0.0,0.1408,0.0,0.0,1.0,1.0,neutral,False,False,False,1.0,1.0,1.0,1.0,1.0
+East Battery,S,a22->i15,167,169,tie,split,72.0,73.0,0.0,0.0,0.0,0.0,1.0,1.0,neutral,False,True,False,1.0,1.0,1.0,1.0,1.0
+East Battery,R,a15->a22,183,167,tie,split,71.0,72.0,0.0,0.0,0.0,0.0,1.0,1.0,neutral,False,True,False,1.0,1.0,1.0,1.0,1.0
+East Battery,R,a22->a15,167,183,refuse,split,79.0,80.0,0.1392,0.2025,0.15,0.175,14.0,16.5,harmful,False,True,False,14.0,16.5,14.0,14.0,14.0
+East Bay Street,R,i3->a1,168,141,tie,split,58.0,59.0,0.0,0.0,0.2373,0.2373,22.73,22.73,neutral,False,False,False,22.73,22.73,22.73,22.73,22.73
+East Bay Street,R,a1->i3,141,168,tie,split,72.0,72.0,0.0,0.0,0.0,0.0,1.0,1.0,neutral,False,False,False,1.0,1.0,1.0,1.0,1.0
+East Bay Street,S,i3->a10,228,229,accept,split,102.0,103.0,0.0588,0.0,0.0,0.0,1.0,1.0,neutral,True,False,True,1.0,1.0,1.0,1.0,1.0
+East Bay Street,S,a10->i3,229,228,accept,split,102.0,102.0,0.1275,0.1176,0.0,0.0,1.0,1.0,neutral,True,False,True,1.0,1.0,1.0,1.0,1.0
+East Bay Street,R,i6->a7,395,518,refuse,split,247.0,247.0,0.0405,0.0,0.0,0.0,1.0,1.0,neutral,True,False,True,1.0,1.0,1.0,1.0,1.0
+East Bay Street,R,a7->i6,518,395,accept,split,185.0,186.0,0.1351,0.0703,0.0,0.0,1.0,1.0,neutral,True,False,True,1.0,1.0,1.0,1.0,1.0
+East Bay Street,S,i6->a20,395,394,accept,split,185.0,185.0,0.0703,0.0,0.0,0.0,1.0,1.0,neutral,True,False,True,1.0,1.0,1.0,1.0,1.0
+East Bay Street,S,a20->i6,394,395,accept,split,185.0,186.0,0.1351,0.0703,0.0,0.0,1.0,1.0,neutral,True,False,True,1.0,1.0,1.0,1.0,1.0
+East Bay Street,R,i12->a1,166,165,accept,split,70.0,71.0,0.0,0.0,0.1972,0.169,18.72,15.9,beneficial,False,False,False,18.72,15.9,18.72,18.72,15.9
+East Bay Street,R,a1->i12,165,166,accept,split,71.0,71.0,0.0,0.0,0.1972,0.0,18.72,1.0,beneficial,False,False,False,18.72,1.0,18.72,18.72,1.0
+East Bay Street,S,i12->a10,140,169,accept,split,72.0,73.0,0.1667,0.0,0.0,0.0,1.0,1.0,neutral,True,False,True,1.0,1.0,1.0,1.0,1.0
+East Bay Street,S,a10->i12,169,140,tie,split,58.0,58.0,0.0,0.0,0.2414,0.2414,23.14,23.14,neutral,False,False,False,23.14,23.14,23.14,23.14,23.14
+East Bay Street,S,i15->a15,231,310,accept,split,143.0,143.0,0.0,0.0,0.0909,0.0,8.09,1.0,beneficial,False,False,False,8.09,1.0,8.09,8.09,1.0
+East Bay Street,S,a15->i15,310,231,tie,split,103.0,104.0,0.1165,0.1165,0.0962,0.0962,8.62,8.62,neutral,False,True,False,8.62,8.62,8.62,8.62,8.62
+East Bay Street,S,i15->a22,231,221,accept,split,98.0,99.0,0.102,0.0,0.0,0.0,1.0,1.0,neutral,True,False,True,1.0,1.0,1.0,1.0,1.0
+East Bay Street,S,a22->i15,221,231,accept,split,103.0,104.0,0.1165,0.1068,0.0962,0.0769,8.62,6.69,beneficial,True,True,False,8.62,6.69,6.69,8.62,6.69
+East Bay Street,R,i16->a7,449,448,accept,split,212.0,212.0,0.0425,0.0,0.0,0.0,1.0,1.0,neutral,True,False,True,1.0,1.0,1.0,1.0,1.0
+East Bay Street,R,a7->i16,448,449,accept,split,212.0,213.0,0.0047,0.0047,0.0986,0.0469,8.86,3.69,beneficial,False,False,False,8.86,3.69,8.86,8.86,3.69
+East Bay Street,S,i16->a20,407,357,accept,split,166.0,167.0,0.0783,0.0361,0.0,0.0,1.0,1.0,neutral,True,False,True,1.0,1.0,1.0,1.0,1.0
+East Bay Street,S,a20->i16,357,407,accept,split,191.0,192.0,0.0,0.0,0.1094,0.0,9.94,1.0,beneficial,False,False,False,9.94,1.0,9.94,9.94,1.0
+East Bay Street,R,a1->a10,141,169,accept,split,72.0,73.0,0.1667,0.0,0.0,0.0,1.0,1.0,neutral,True,False,True,1.0,1.0,1.0,1.0,1.0
+East Bay Street,R,a10->a1,169,141,tie,split,58.0,59.0,0.0,0.0,0.2373,0.2373,22.73,22.73,neutral,False,False,False,22.73,22.73,22.73,22.73,22.73
+East Bay Street,R,a7->a20,518,394,accept,split,185.0,185.0,0.0703,0.0595,0.0,0.0,1.0,1.0,neutral,True,False,True,1.0,1.0,1.0,1.0,1.0
+East Bay Street,R,a20->a7,394,518,refuse,split,247.0,247.0,0.0405,0.0,0.0,0.0,1.0,1.0,neutral,True,False,True,1.0,1.0,1.0,1.0,1.0
+East Bay Street,R,a15->a22,310,221,accept,split,98.0,99.0,0.102,0.0714,0.0,0.0,1.0,1.0,neutral,True,True,False,1.0,1.0,1.0,1.0,1.0
+East Bay Street,R,a22->a15,221,310,accept,split,143.0,143.0,0.0,0.0,0.0909,0.014,8.09,0.4,beneficial,False,True,False,8.09,0.4,8.09,8.09,0.4
+Fishburne Street,S,i7->a5,135,142,tie,split,59.0,59.0,0.0,0.0,0.0,0.0,1.0,1.0,neutral,False,False,False,1.0,1.0,1.0,1.0,1.0
+Fishburne Street,S,a5->i7,142,135,tie,split,55.0,56.0,0.1273,0.1273,0.2321,0.2321,22.21,22.21,neutral,False,False,False,22.21,22.21,22.21,22.21,22.21
+Huger Street,S,i5->a16,905,902,accept,split,439.0,439.0,0.1822,0.0182,0.0296,0.0,1.96,1.0,beneficial,True,False,True,1.96,1.0,1.0,1.0,1.0
+Huger Street,S,a16->i5,902,905,accept,split,440.0,441.0,0.1932,0.0205,0.0113,0.0,0.13,1.0,harmful,True,False,True,0.13,1.0,1.0,1.0,0.13
+Huger Street,S,i5->a23,905,951,accept,split,463.0,464.0,0.0,0.0,0.25,0.0,24.0,1.0,beneficial,False,False,False,24.0,1.0,24.0,24.0,1.0
+Huger Street,S,a23->i5,951,905,accept,split,440.0,441.0,0.1932,0.0705,0.0113,0.0,0.13,1.0,harmful,True,False,True,0.13,1.0,1.0,1.0,0.13
+Huger Street,R,a16->a23,902,951,accept,split,463.0,464.0,0.0,0.0,0.25,0.0,24.0,1.0,beneficial,False,False,False,24.0,1.0,24.0,24.0,1.0
+Huger Street,R,a23->a16,951,902,accept,split,439.0,439.0,0.1822,0.0501,0.0296,0.0,1.96,1.0,beneficial,True,False,True,1.96,1.0,1.0,1.0,1.0
+King Street,S,i2->a2,241,234,refuse,split,105.0,105.0,0.0667,0.0857,0.1238,0.1238,11.38,11.38,neutral,False,False,False,11.38,11.38,11.38,11.38,11.38
+King Street,S,a2->i2,234,241,tie,split,108.0,109.0,0.0,0.0,0.0,0.0,1.0,1.0,neutral,False,False,False,1.0,1.0,1.0,1.0,1.0
+King Street,R,i9->a11,355,355,accept,split,165.0,166.0,0.2727,0.0788,0.0,0.0,1.0,1.0,neutral,True,False,True,1.0,1.0,1.0,1.0,1.0
+King Street,R,a11->i9,355,355,accept,split,165.0,166.0,0.1758,0.0,0.0783,0.0,6.83,1.0,beneficial,True,True,False,6.83,1.0,1.0,6.83,1.0
+King Street,R,i11->a12,63,61,,defer (n_cal<99),,,,,,,,,,,,,,,,,
+King Street,R,a12->i11,61,63,,defer (n_cal<99),,,,,,,,,,,,,,,,,
+King Street,R,i13->a11,0,0,,defer (n_cal<99),,,,,,,,,,,,,,,,,
+King Street,R,a11->i13,0,0,,defer (n_cal<99),,,,,,,,,,,,,,,,,
+King Street,S,i14->a14,281,281,refuse,split,128.0,129.0,0.1016,0.2734,0.1008,0.1008,9.08,9.08,neutral,False,False,False,9.08,9.08,9.08,9.08,9.08
+King Street,S,a14->i14,281,281,tie,split,128.0,129.0,0.0,0.0,0.0,0.0,1.0,1.0,neutral,False,True,False,1.0,1.0,1.0,1.0,1.0
+King Street,R,i20->a21,109,113,accept,too small for split,,,,,,,,,,,,,,,,,
+King Street,R,a21->i20,113,109,accept,too small for split,,,,,,,,,,,,,,,,,
+Lockwood Drive,S,i7->a5,279,337,accept,split,156.0,157.0,0.0833,0.0513,0.2102,0.121,20.02,11.1,beneficial,True,False,True,20.02,11.1,11.1,11.1,11.1
+Lockwood Drive,S,a5->i7,337,279,accept,split,127.0,128.0,0.0,0.0,0.1328,0.0,12.28,1.0,beneficial,False,False,False,12.28,1.0,12.28,12.28,1.0
+Morrison Drive,S,i4->a3,95,93,,defer (n_cal<99),,,,,,,,,,,,,,,,,
+Morrison Drive,S,a3->i4,93,95,,defer (n_cal<99),,,,,,,,,,,,,,,,,
+Morrison Drive,R,i4->a8,63,49,,defer (n_cal<99),,,,,,,,,,,,,,,,,
+Morrison Drive,R,a8->i4,49,63,,defer (n_cal<99),,,,,,,,,,,,,,,,,
+Morrison Drive,R,a3->a8,49,49,,defer (n_cal<99),,,,,,,,,,,,,,,,,
+Morrison Drive,R,a8->a3,49,49,,defer (n_cal<99),,,,,,,,,,,,,,,,,
+Murray Boulevard,S,i17->a18,85,84,,defer (n_cal<99),,,,,,,,,,,,,,,,,
+Murray Boulevard,S,a18->i17,84,85,,defer (n_cal<99),,,,,,,,,,,,,,,,,

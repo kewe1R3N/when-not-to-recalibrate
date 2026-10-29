@@ -13,6 +13,8 @@ data/
   lincoln_iphone/{2023-10,2023-11_12,2024-01,2024-05}/{11th,13th,16th,Nst,billy}.csv
   lincoln_android/{11th,16th,Nst,billy}.csv
   charleston_citadel_iphone/segment_01..20.csv
+  charleston_citadel_android/segment_01..24.csv
+  charleston_citadel_pair_corridors.csv   street-matched pair corridors as row intervals
   charleston_ravenel_android/{TotalAcceleration,Gravity}.csv
   columbia_iphone/{R1,R2a,R2b}.csv
 corridors.csv        OpenStreetMap node IDs that fix each corridor's ends
@@ -34,7 +36,7 @@ Instead, each row of a ride file carries:
 | column | meaning |
 |---|---|
 | `t_s` | time since the start of the file (s); from the logged clock where it parses, otherwise row index / 10 Hz |
-| `X, Y, Z` | acceleration as logged (Lincoln iPhone and Citadel: g, gravity present; Lincoln Android: already standardized, gravity removed) |
+| `X, Y, Z` | acceleration as logged (Lincoln iPhone and Citadel iPhone: g, gravity present; Lincoln Android: already standardized, gravity removed; Citadel Android: m/s², gravity removed) |
 | `gps_fix` | 1 if the row had a valid position fix, else 0 |
 | `along_track_m` | cumulative distance travelled since the first fix (m) |
 | `route_dist_m` | Lincoln Android only: upstream map-matched distance along the route (m) |
@@ -52,6 +54,13 @@ axes can be rebuilt from OpenStreetMap. The N St axis uses the principal axis of
 the N Street roadway with its origin at node 134968191; the East Bay axis runs
 along the street's mapped polyline from south to north.
 
+The Citadel Android segments have no logged clock (`t_s` is row index / 10 Hz) and
+about one GPS fix per second. `charleston_citadel_pair_corridors.csv` lists, for every
+street-matched pair of the extended decision check (passes `i1`..`i20` iPhone,
+`a1`..`a24` Android), the rows of each pass inside the pair's corridor as half-open
+intervals `[row_from, row_to)`. Building these pairs requires raw coordinates, which
+are available on request; the intervals are its complete output.
+
 The Ravenel Bridge ride is the raw 105 Hz Sensor Logger export, reduced to
 `seconds_elapsed, x, y, z` in m/s² for total acceleration and gravity.
 
@@ -67,6 +76,10 @@ The Ravenel Bridge ride is the raw 105 Hz Sensor Logger export, reduced to
   corridor rule and its logged deviations are in Supplementary Section S12).
 - The comparison of corridor and other-route calibration (`code/aic2_corridor_vs_routes.py`,
   Supplementary Section S13).
+- The out-of-sample decision check and its Citadel Android extension
+  (`code/aic2_decision_split.py`, `code/aic2_citadel_android.py`; Supplementary
+  Sections S15 and S16), with the Android pair corridors taken from
+  `charleston_citadel_pair_corridors.csv`.
 - The spatial-repeatability analysis (`code/aic2_chainage*.py`), from the
   `chainage_m` and `offset_m` columns.
 

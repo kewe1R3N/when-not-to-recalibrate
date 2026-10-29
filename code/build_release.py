@@ -127,6 +127,32 @@ def charleston(man):
     return corr
 
 
+def citadel_android(man):
+    """Citadel Android segments (gravity-removed m/s^2, ~1 Hz GPS, no timestamps) and the
+    street-matched pair corridors of the extended decision check, as row intervals."""
+    import aic2_citadel_android as CA
+    P = CA.passes()
+    for j, path in enumerate(CA.AND, start=1):
+        df = pd.read_csv(path)
+        lat, lon = df.location_latitude.values, df.location_longitude.values
+        out = pd.DataFrame({"t_s": np.arange(len(df)) / X.FS})
+        for c, k in zip(("X", "Y", "Z"), ("accelerometer_x", "accelerometer_y", "accelerometer_z")):
+            out[c] = df[k].values
+        out["gps_fix"], out["along_track_m"] = haversine_track(lat, lon)
+        f = OUT / "data" / "charleston_citadel_android" / f"segment_{j:02d}.csv"
+        f.parent.mkdir(parents=True, exist_ok=True)
+        out.round(6).to_csv(f, index=False); man.append((f, len(out)))
+    pairs, masks = CA.pairs(P, save=False)
+    rows = []
+    for (street, a, b), mk in masks.items():
+        for k, m in zip((a, b), mk):
+            idx = np.where(np.diff(np.r_[0, m.astype(int), 0]))[0]
+            for r0, r1 in zip(idx[::2], idx[1::2]):
+                rows.append(dict(street=street, pass_a=a, pass_b=b, pass_=k, row_from=int(r0), row_to=int(r1)))
+    f = OUT / "data" / "charleston_citadel_pair_corridors.csv"
+    pd.DataFrame(rows).rename(columns={"pass_": "pass"}).to_csv(f, index=False); man.append((f, len(rows)))
+
+
 def columbia(man):
     import aic2_columbia as CO
     nodes, ways = CO.load_osm()
@@ -222,6 +248,7 @@ if __name__ == "__main__":
     lincoln(ch, e1, man)
     corr = charleston(man)
     col = columbia(man)
+    citadel_android(man)
     rows = corridors(corr, e1, col)
     dropped = results()
     code()
