@@ -76,7 +76,7 @@ The Ravenel Bridge ride is the raw 105 Hz Sensor Logger export, reduced to
   corridor rule and its logged deviations are in Supplementary Section S12).
 - The comparison of corridor and other-route calibration (`code/aic2_corridor_vs_routes.py`,
   Supplementary Section S13).
-- The out-of-sample decision check and its Citadel Android extension
+- The held-back decision check and its Citadel Android extension
   (`code/aic2_decision_split.py`, `code/aic2_citadel_android.py`; Supplementary
   Sections S15 and S16), with the Android pair corridors taken from
   `charleston_citadel_pair_corridors.csv`.
