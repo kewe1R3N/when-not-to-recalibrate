@@ -1,0 +1,13 @@
+fold,method,PR_AUC,ROC_AUC
+13th,learned s_t,0.6445,0.735
+13th,VDV,0.6498,0.7313
+13th,crest (SHI),0.482,0.5167
+13th,RMS |a|,0.6562,0.7629
+billy,learned s_t,0.8163,0.8975
+billy,VDV,0.8221,0.8959
+billy,crest (SHI),0.4753,0.5859
+billy,RMS |a|,0.8304,0.9085
+Nst,learned s_t,0.4484,0.8436
+Nst,VDV,0.4553,0.8305
+Nst,crest (SHI),0.292,0.6832
+Nst,RMS |a|,0.4639,0.8356

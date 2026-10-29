@@ -1,0 +1,13 @@
+rule,direction,n_cal,n_eval,overlap_m,tau,CER_frozen,CER_conformal,status
+R0 rounded cells (4 dp),6->16,78,136,,inf,0.0882,0.0,insufficient
+R0 rounded cells (4 dp),16->6,136,78,,0.9240946970564874,0.0,0.0,finite
+"R1 centerline, 15 m",6->16,445,491,832.0,1.7050804224935288,0.0428,0.0,finite
+"R1 centerline, 15 m",16->6,491,445,832.0,0.9240946970564874,0.0562,0.0292,finite
+"R2 centerline, 25 m",6->16,472,491,832.0,1.7050804224935288,0.0428,0.0,finite
+"R2 centerline, 25 m",16->6,491,472,832.0,0.9240946970564874,0.053,0.0275,finite
+R0 rounded cells (4 dp),3->12,76,54,,inf,0.0,0.0,insufficient
+R0 rounded cells (4 dp),12->3,54,76,,inf,0.0263,0.0,insufficient
+"R1 centerline, 15 m",3->12,240,208,436.0,0.8788133214615118,0.0673,0.0577,finite
+"R1 centerline, 15 m",12->3,208,240,436.0,1.1840099304006082,0.0542,0.0,finite
+"R2 centerline, 25 m",3->12,240,212,436.0,0.8788133214615118,0.066,0.0566,finite
+"R2 centerline, 25 m",12->3,212,240,436.0,1.1840099304006082,0.0542,0.0,finite

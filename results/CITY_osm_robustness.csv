@@ -1,0 +1,33 @@
+rule,direction,n_cal,n_eval,exceed_frozen,exceed_conf,CER_frozen,CER_conformal,dev_frozen,dev_conformal,status,corridor_m,end_nodes
+"R0 published (shared rounded cells, end-truncated support)",6->16,78,136.0,12.0,0.0,0.0882,0.0,0.0782,0.01,insufficient,,
+"R0 published (shared rounded cells, end-truncated support)",16->6,136,78.0,0.0,0.0,0.0,0.0,0.01,0.01,finite,,
+R0 strict support,6->16,78,136.0,12.0,0.0,0.0882,0.0,0.0782,0.01,insufficient,,
+R0 strict support,16->6,136,78.0,0.0,0.0,0.0,0.0,0.01,0.01,finite,,
+R0s grid-shift sensitivity,6->16,20-161,,,,,,,,81% of shifts insufficient,,
+R0s grid-shift sensitivity,16->6,59-201,,,,,,,,37% of shifts insufficient,,
+OSM East Bay St 15 m,6->16,357,407.0,21.0,0.0,0.0516,0.0,0.0416,0.01,finite,709.0,440922351(Guignard Street)-447972413(Inspection Street)
+OSM East Bay St 15 m,16->6,407,357.0,25.0,13.0,0.07,0.0364,0.06,0.0264,finite,709.0,440922351(Guignard Street)-447972413(Inspection Street)
+OSM inset 25 m,6->16,331,383.0,21.0,0.0,0.0548,0.0,0.0448,0.01,finite,659.0,440922351(Guignard Street)-447972413(Inspection Street)
+OSM inset 25 m,16->6,383,331.0,22.0,13.0,0.0665,0.0393,0.0565,0.0293,finite,659.0,440922351(Guignard Street)-447972413(Inspection Street)
+OSM narrower radius 8 m,6->16,330,407.0,21.0,0.0,0.0516,0.0,0.0416,0.01,finite,709.0,440922351(Guignard Street)-447972413(Inspection Street)
+OSM narrower radius 8 m,16->6,407,330.0,24.0,13.0,0.0727,0.0394,0.0627,0.0294,finite,709.0,440922351(Guignard Street)-447972413(Inspection Street)
+OSM coverage 0-100 pct,6->16,357,407.0,21.0,0.0,0.0516,0.0,0.0416,0.01,finite,709.0,440922351(Guignard Street)-447972413(Inspection Street)
+OSM coverage 0-100 pct,16->6,407,357.0,25.0,13.0,0.07,0.0364,0.06,0.0264,finite,709.0,440922351(Guignard Street)-447972413(Inspection Street)
+OSM coverage 5-95 pct,6->16,357,407.0,21.0,0.0,0.0516,0.0,0.0416,0.01,finite,709.0,440922351(Guignard Street)-447972413(Inspection Street)
+OSM coverage 5-95 pct,16->6,407,357.0,25.0,13.0,0.07,0.0364,0.06,0.0264,finite,709.0,440922351(Guignard Street)-447972413(Inspection Street)
+"R0 published (shared rounded cells, end-truncated support)",3->12,76,54.0,0.0,0.0,0.0,0.0,0.01,0.01,insufficient,,
+"R0 published (shared rounded cells, end-truncated support)",12->3,54,76.0,2.0,0.0,0.0263,0.0,0.0163,0.01,insufficient,,
+R0 strict support,3->12,76,50.0,0.0,0.0,0.0,0.0,0.01,0.01,insufficient,,
+R0 strict support,12->3,50,76.0,2.0,0.0,0.0263,0.0,0.0163,0.01,insufficient,,
+R0s grid-shift sensitivity,3->12,40-125,,,,,,,,95% of shifts insufficient,,
+R0s grid-shift sensitivity,12->3,24-95,,,,,,,,100% of shifts insufficient,,
+OSM East Bay St 15 m,3->12,168,140.0,14.0,14.0,0.1,0.1,0.09,0.09,finite,332.0,440793623(Gillon Street)-440852630(Cumberland Street)
+OSM East Bay St 15 m,12->3,140,168.0,0.0,0.0,0.0,0.0,0.01,0.01,finite,332.0,440793623(Gillon Street)-440852630(Cumberland Street)
+OSM inset 25 m,3->12,140,118.0,6.0,6.0,0.0508,0.0508,0.0408,0.0408,finite,282.0,440793623(Gillon Street)-440852630(Cumberland Street)
+OSM inset 25 m,12->3,118,140.0,0.0,0.0,0.0,0.0,0.01,0.01,finite,282.0,440793623(Gillon Street)-440852630(Cumberland Street)
+OSM narrower radius 8 m,3->12,168,108.0,12.0,12.0,0.1111,0.1111,0.1011,0.1011,finite,332.0,440793623(Gillon Street)-440852630(Cumberland Street)
+OSM narrower radius 8 m,12->3,108,168.0,0.0,0.0,0.0,0.0,0.01,0.01,finite,332.0,440793623(Gillon Street)-440852630(Cumberland Street)
+OSM coverage 0-100 pct,3->12,168,140.0,14.0,14.0,0.1,0.1,0.09,0.09,finite,332.0,440793623(Gillon Street)-440852630(Cumberland Street)
+OSM coverage 0-100 pct,12->3,140,168.0,0.0,0.0,0.0,0.0,0.01,0.01,finite,332.0,440793623(Gillon Street)-440852630(Cumberland Street)
+OSM coverage 5-95 pct,3->12,150,124.0,14.0,14.0,0.1129,0.1129,0.1029,0.1029,finite,298.0,98406117(Middle Atlantic Wharf)-440852630(Cumberland Street)
+OSM coverage 5-95 pct,12->3,124,150.0,0.0,0.0,0.0,0.0,0.01,0.01,finite,298.0,98406117(Middle Atlantic Wharf)-440852630(Cumberland Street)

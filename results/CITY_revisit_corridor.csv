@@ -1,0 +1,5 @@
+cal_pass,eval_pass,n_cal,n_eval,FPR_frozen_lincoln,FPR_conformal_revisit
+seg6,seg16,78,136,0.0882,0.0
+seg16,seg6,136,78,0.0,0.0
+seg3,seg12,76,54,0.0,0.0
+seg12,seg3,54,76,0.0263,0.0

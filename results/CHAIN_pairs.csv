@@ -1,0 +1,11 @@
+pair,same_direction,rho_st,rho_v4
+autumn-winter,True,0.443,0.449
+autumn-spring,False,0.327,0.126
+autumn-summer,False,0.454,0.35
+autumn-android,False,0.159,0.077
+winter-spring,False,0.277,0.283
+winter-summer,False,0.335,0.275
+winter-android,False,0.288,0.153
+spring-summer,True,0.524,0.501
+spring-android,True,0.677,0.787
+summer-android,True,0.297,0.364

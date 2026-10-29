@@ -1,0 +1,14 @@
+case,truth,cls,frozen,conf,adverse,direct,why,rho,rho_flag,js,js_flag
+unit_ms2,input fault,A (affine),0.0435,0.0435,False,True,magnitude scale contradicts the declared g units,0.908,False,0.0,False
+gravity_rm,input fault,A (affine),0.0435,0.0435,False,True,the ~1 g component on the gravity axis is absent,0.908,False,0.0,False
+missing_std,input fault,B (stack),0.0,0.0348,True,True,the standardization step is pipeline state and is checkable,0.38,True,0.3333,True
+axswap_YZ,input fault,B (orientation),0.0551,0.0406,False,True,gravity moves off Z onto Y,0.921,False,0.0321,False
+axswap_XY,input fault,B (orientation),0.0609,0.0464,False,False,gravity stays on Z; no declared quantity changes,0.92,False,0.0642,True
+rate_2x,input fault,B (temporal),0.0,0.0,False,True,sample count contradicts the declared 10 Hz timebase,0.849,False,0.0138,False
+noise_floor(clean 2nd half),clean,floor,0.043,0.043,False,False,conventions match what is declared,0.908,False,0.0103,False
+spring,clean,season,0.043,0.016,False,False,conventions match what is declared,0.924,False,0.0386,False
+autumn,clean,season,0.045,0.0,False,False,conventions match what is declared,0.913,False,0.0165,False
+winter,clean,season,0.039,0.0,False,False,conventions match what is declared,0.959,False,0.0441,True
+android,clean,device,0.077,0.101,True,False,conventions match what is declared,0.829,False,0.0394,False
+citadel_iphone(city),clean,city,,,,False,conventions match what is declared,0.923,False,0.0137,False
+ravenel(city+device+app),clean,city_compound,,,,False,conventions match what is declared,0.852,False,0.036,False

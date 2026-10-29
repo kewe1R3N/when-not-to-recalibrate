@@ -1,0 +1,16 @@
+fold,method,AP
+13th,RMS,0.6562
+13th,speed only,0.3824
+13th,speed-residual RMS,0.8245
+13th,sound level,0.4701
+13th,(base rate),0.4701
+billy,RMS,0.8304
+billy,speed only,0.8859
+billy,speed-residual RMS,0.4221
+billy,sound level,0.4203
+billy,(base rate),0.4182
+Nst,RMS,0.4639
+Nst,speed only,0.3351
+Nst,speed-residual RMS,0.4328
+Nst,sound level,0.1838
+Nst,(base rate),0.1838

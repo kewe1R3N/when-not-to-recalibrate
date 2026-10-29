@@ -1,0 +1,15 @@
+{
+  "detection": {
+    "1.2": 0,
+    "1.4": 0,
+    "1.6": 2
+  },
+  "placebo_rate": 0.0,
+  "criteria": {
+    "det_16": false,
+    "placebo": true,
+    "uniform": false,
+    "both": false
+  },
+  "gate": "FAIL"
+}

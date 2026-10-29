@@ -1,0 +1,8 @@
+context,kind,JS
+noise_floor(clean 2nd half),floor,0.0103
+spring,season,0.0386
+autumn,season,0.0165
+winter,season,0.0441
+android,device,0.0394
+citadel_iphone(city),city,0.0137
+ravenel(city+device+app),city_compound,0.036

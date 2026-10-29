@@ -1,0 +1,21 @@
+source,eval,FPR,inflation_x
+spring,spring(held-out half),0.0157790927021696,1.6
+spring,summer,0.0168302945301542,1.7
+spring,autumn,0.0324324324324324,3.2
+spring,winter,0.0267857142857142,2.7
+spring,android,0.0328185328185328,3.3
+summer,summer(held-out half),0.0434782608695652,4.3
+summer,spring,0.0433526011560693,4.3
+summer,autumn,0.0459459459459459,4.6
+summer,winter,0.0456349206349206,4.6
+summer,android,0.0492277992277992,4.9
+autumn,autumn(held-out half),0.0,0.0
+autumn,spring,0.0,0.0
+autumn,summer,0.0,0.0
+autumn,winter,0.0178571428571428,1.8
+autumn,android,0.0144787644787644,1.4
+winter,winter(held-out half),0.0,0.0
+winter,spring,0.0,0.0
+winter,summer,0.0,0.0
+winter,autumn,0.0,0.0
+winter,android,0.0125482625482625,1.3

@@ -1,0 +1,208 @@
+{
+  "summary": {
+    "quantile update only": {
+      "missed": 5,
+      "false_trigger": 0,
+      "unresolved": 2
+    },
+    "+ direct input checks": {
+      "missed": 1,
+      "false_trigger": 0,
+      "unresolved": 1
+    },
+    "+ auxiliary correlation": {
+      "missed": 1,
+      "false_trigger": 0,
+      "unresolved": 1
+    },
+    "+ codebook JS": {
+      "missed": 0,
+      "false_trigger": 1,
+      "unresolved": 1
+    }
+  },
+  "cases": [
+    {
+      "case": "unit_ms2",
+      "truth": "input fault",
+      "cls": "A (affine)",
+      "frozen": 0.0435,
+      "conf": 0.0435,
+      "adverse": false,
+      "direct": true,
+      "why": "magnitude scale contradicts the declared g units",
+      "rho": 0.908,
+      "rho_flag": false,
+      "js": 0.0,
+      "js_flag": false
+    },
+    {
+      "case": "gravity_rm",
+      "truth": "input fault",
+      "cls": "A (affine)",
+      "frozen": 0.0435,
+      "conf": 0.0435,
+      "adverse": false,
+      "direct": true,
+      "why": "the ~1 g component on the gravity axis is absent",
+      "rho": 0.908,
+      "rho_flag": false,
+      "js": 0.0,
+      "js_flag": false
+    },
+    {
+      "case": "missing_std",
+      "truth": "input fault",
+      "cls": "B (stack)",
+      "frozen": 0.0,
+      "conf": 0.0348,
+      "adverse": true,
+      "direct": true,
+      "why": "the standardization step is pipeline state and is checkable",
+      "rho": 0.38,
+      "rho_flag": true,
+      "js": 0.3333,
+      "js_flag": true
+    },
+    {
+      "case": "axswap_YZ",
+      "truth": "input fault",
+      "cls": "B (orientation)",
+      "frozen": 0.0551,
+      "conf": 0.0406,
+      "adverse": false,
+      "direct": true,
+      "why": "gravity moves off Z onto Y",
+      "rho": 0.921,
+      "rho_flag": false,
+      "js": 0.0321,
+      "js_flag": false
+    },
+    {
+      "case": "axswap_XY",
+      "truth": "input fault",
+      "cls": "B (orientation)",
+      "frozen": 0.0609,
+      "conf": 0.0464,
+      "adverse": false,
+      "direct": false,
+      "why": "gravity stays on Z; no declared quantity changes",
+      "rho": 0.92,
+      "rho_flag": false,
+      "js": 0.0642,
+      "js_flag": true
+    },
+    {
+      "case": "rate_2x",
+      "truth": "input fault",
+      "cls": "B (temporal)",
+      "frozen": 0.0,
+      "conf": 0.0,
+      "adverse": false,
+      "direct": true,
+      "why": "sample count contradicts the declared 10 Hz timebase",
+      "rho": 0.849,
+      "rho_flag": false,
+      "js": 0.0138,
+      "js_flag": false
+    },
+    {
+      "case": "noise_floor(clean 2nd half)",
+      "truth": "clean",
+      "cls": "floor",
+      "frozen": 0.043,
+      "conf": 0.043,
+      "adverse": false,
+      "direct": false,
+      "why": "conventions match what is declared",
+      "rho": 0.908,
+      "rho_flag": false,
+      "js": 0.0103,
+      "js_flag": false
+    },
+    {
+      "case": "spring",
+      "truth": "clean",
+      "cls": "season",
+      "frozen": 0.043,
+      "conf": 0.016,
+      "adverse": false,
+      "direct": false,
+      "why": "conventions match what is declared",
+      "rho": 0.924,
+      "rho_flag": false,
+      "js": 0.0386,
+      "js_flag": false
+    },
+    {
+      "case": "autumn",
+      "truth": "clean",
+      "cls": "season",
+      "frozen": 0.045,
+      "conf": 0.0,
+      "adverse": false,
+      "direct": false,
+      "why": "conventions match what is declared",
+      "rho": 0.913,
+      "rho_flag": false,
+      "js": 0.0165,
+      "js_flag": false
+    },
+    {
+      "case": "winter",
+      "truth": "clean",
+      "cls": "season",
+      "frozen": 0.039,
+      "conf": 0.0,
+      "adverse": false,
+      "direct": false,
+      "why": "conventions match what is declared",
+      "rho": 0.959,
+      "rho_flag": false,
+      "js": 0.0441,
+      "js_flag": true
+    },
+    {
+      "case": "android",
+      "truth": "clean",
+      "cls": "device",
+      "frozen": 0.077,
+      "conf": 0.101,
+      "adverse": true,
+      "direct": false,
+      "why": "conventions match what is declared",
+      "rho": 0.829,
+      "rho_flag": false,
+      "js": 0.0394,
+      "js_flag": false
+    },
+    {
+      "case": "citadel_iphone(city)",
+      "truth": "clean",
+      "cls": "city",
+      "frozen": null,
+      "conf": null,
+      "adverse": null,
+      "direct": false,
+      "why": "conventions match what is declared",
+      "rho": 0.923,
+      "rho_flag": false,
+      "js": 0.0137,
+      "js_flag": false
+    },
+    {
+      "case": "ravenel(city+device+app)",
+      "truth": "clean",
+      "cls": "city_compound",
+      "frozen": null,
+      "conf": null,
+      "adverse": null,
+      "direct": false,
+      "why": "conventions match what is declared",
+      "rho": 0.852,
+      "rho_flag": false,
+      "js": 0.036,
+      "js_flag": false
+    }
+  ]
+}

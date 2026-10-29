@@ -1,0 +1,5 @@
+context,method,FPR,calib_err
+spring,VDV+conformal,0.0,0.01
+autumn,VDV+conformal,0.0,0.01
+winter,VDV+conformal,0.0569,0.0469
+android,VDV+conformal,0.0929,0.0829

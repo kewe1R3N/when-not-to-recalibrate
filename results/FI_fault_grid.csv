@@ -1,0 +1,8 @@
+fault,cls,FPR_frozen,FPR_x,rho_corridor,JS_usage,FPR_conformal,rho_routes_frozen,rho_routes_cbfix
+none,-,0.0435,4.3,0.908,0.0,0.0435,0.895,0.86
+unit_ms2,A (affine),0.0435,4.3,0.908,0.0,0.0435,0.895,0.86
+gravity_rm,A (affine),0.0435,4.3,0.908,0.0,0.0435,0.895,0.86
+missing_std,B (stack),0.0,0.0,0.38,0.3333,0.0348,0.575,0.707
+axswap_YZ,B (orientation),0.0551,5.5,0.921,0.0321,0.0406,0.897,0.838
+axswap_XY,B (orientation),0.0609,6.1,0.92,0.0642,0.0464,0.893,0.846
+rate_2x,B (temporal),0.0,0.0,0.849,0.0138,0.0,0.859,0.812

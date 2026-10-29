@@ -1,0 +1,70 @@
+{
+  "source=May NSt_M1": {
+    "same_median": 0.48374082016247677,
+    "same_null_q95": 0.1578957283366779,
+    "same_null_median": -0.01286541785562706,
+    "cross_median": 0.3072496098757598,
+    "cross_null_q95": 0.11413455208842176,
+    "v4_same_median": 0.4753652834599651,
+    "v4_same_null_q95": 0.1645426651081239,
+    "v4_cross_median": 0.21402688486265345,
+    "v4_cross_null_q95": 0.11479398012857979,
+    "pass_same": true
+  },
+  "source=May NSt_pooled-5 (M2)": {
+    "var_p": 0.4399713845304248,
+    "var_eps": 0.5524569012323368,
+    "mad_p": 0.006890159852207917,
+    "mad_eps": 0.006787989145967487,
+    "mad_ratio": 1.015051689689446,
+    "null_var_p_q95": 0.2690903113416878,
+    "null_var_p_median": 0.16948479668137417,
+    "null_mad_ratio_q95": 0.9307664858064961,
+    "null_mad_ratio_median": 0.5360047189907171
+  },
+  "source=May NSt_W->E (A-G1)": {
+    "var_p": 0.7217290525876888,
+    "var_eps": 0.4029435994976229,
+    "mad_p": 0.008965550905598313,
+    "mad_eps": 0.0027241667927749348,
+    "mad_ratio": 3.2911167294810455,
+    "null_var_p_q95": 0.49011945586317146,
+    "null_var_p_median": 0.29695584825592475,
+    "null_mad_ratio_q95": 3.090308143020375,
+    "null_mad_ratio_median": 1.5647209303244316
+  },
+  "source=May 16th (excluded)_M1": {
+    "same_median": 0.4842376355574536,
+    "same_null_q95": 0.15864599034310276,
+    "same_null_median": -0.011740123617194065,
+    "cross_median": 0.3072788598800308,
+    "cross_null_q95": 0.11403042860085384,
+    "v4_same_median": 0.4753652834599651,
+    "v4_same_null_q95": 0.15923290473407362,
+    "v4_cross_median": 0.21402688486265345,
+    "v4_cross_null_q95": 0.10994155464640562,
+    "pass_same": true
+  },
+  "source=May 16th (excluded)_pooled-5 (M2)": {
+    "var_p": 0.4302639949513557,
+    "var_eps": 0.5563596207589562,
+    "mad_p": 0.004566194431072913,
+    "mad_eps": 0.004746577244040886,
+    "mad_ratio": 0.9619972869514689,
+    "null_var_p_q95": 0.30220172656111655,
+    "null_var_p_median": 0.1748175864391749,
+    "null_mad_ratio_q95": 0.9404599947703952,
+    "null_mad_ratio_median": 0.5431960348906755
+  },
+  "source=May 16th (excluded)_W->E (A-G1)": {
+    "var_p": 0.7284611376196193,
+    "var_eps": 0.40495852867042903,
+    "mad_p": 0.005557358705180629,
+    "mad_eps": 0.001504970054530258,
+    "mad_ratio": 3.6926706205561226,
+    "null_var_p_q95": 0.49827541446732215,
+    "null_var_p_median": 0.29567393263929365,
+    "null_mad_ratio_q95": 3.5579477304828258,
+    "null_mad_ratio_median": 1.5852837718908135
+  }
+}
