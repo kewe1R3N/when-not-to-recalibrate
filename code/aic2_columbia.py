@@ -226,7 +226,7 @@ def figure():
     ax.scatter([], [], s=10, color="white", label="co-primary corridors (Sumter St, Main St)")
     ax.set_xlim(lo0, lo1); ax.set_ylim(O.merc_y(la0), O.merc_y(la1)); ax.set_aspect("equal")
     ax.set_xticks([]); ax.set_yticks([]); ax.legend(loc="lower left", fontsize=7.5, framealpha=0.88)
-    ax.set_title("(a) Columbia repeated rides", fontsize=10, loc="left")
+    ax.set_title("(a) Columbia rides", fontsize=10, loc="left")
     ax = axes[1]
     m = X.A.load_model(X.CKPT, dev)
     src, _ = X.load_xyz(str(X.IPHONE / "summer" / "Nst.csv"))
@@ -244,7 +244,7 @@ def figure():
     ax.axhline(fr["tau"], color="#D55E00", ls="--", lw=1.2, label="frozen Lincoln threshold")
     ax.set_xlabel("Chainage along Main St (m)"); ax.set_ylabel(r"Deployed score $\tilde s_t$")
     ax.set_ylim(0.1, 1.18); ax.legend(fontsize=8, frameon=False, loc="upper left", ncol=1)
-    ax.set_title("(b) Main St corridor, same direction, 15 min apart", fontsize=10, loc="left")
+    ax.set_title("(b) Main St corridor", fontsize=10, loc="left")
     for sp in ("top", "right"): ax.spines[sp].set_visible(False)
     fig.text(0.01, 0.01, "Imagery: Esri, Maxar, Earthstar Geographics, and the GIS User Community; "
              "street data © OpenStreetMap contributors, ODbL.", fontsize=6.5, color="0.35")

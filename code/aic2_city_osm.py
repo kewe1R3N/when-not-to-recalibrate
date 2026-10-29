@@ -318,7 +318,7 @@ def plot_maps(maps, line, walks):
         ax.plot([], [], marker="o", ms=4, mfc="none", mec="0.4", ls="none", label="open: excluded rows")
         ax.set_xlim(lo0, lo1); ax.set_ylim(merc_y(la0), merc_y(la1)); ax.set_aspect("equal")
         ax.set_xticks([]); ax.set_yticks([])
-        ax.set_title(f"({'a' if pair == (6, 16) else 'b'}) segments {pair[0]} and {pair[1]}",
+        ax.set_title(f"({'a' if pair == (6, 16) else 'b'}) Segments {pair[0]} and {pair[1]}",
                      fontsize=10, loc="left")
         ax.legend(loc="lower left", fontsize=6.3, framealpha=0.88)
     ax = axes[2]
@@ -332,7 +332,7 @@ def plot_maps(maps, line, walks):
     ax.set_xlabel("signed lateral offset from the mapped East Bay St line (m)")
     ax.set_ylabel("retained GPS rows")
     ax.legend(fontsize=7, title="retained rows only", title_fontsize=7)
-    ax.set_title("(c) lateral position of each pass", fontsize=10, loc="left")
+    ax.set_title("(c) Lateral offset", fontsize=10, loc="left")
     fig.text(0.01, 0.006, "Imagery: Esri, Maxar, Earthstar Geographics, and the GIS User Community. "
              "Street and sidewalk data \u00a9 OpenStreetMap contributors, ODbL. "
              "Offsets beyond -8 / +18 m are drawn in the end bins.", fontsize=6.5, color="0.3")
