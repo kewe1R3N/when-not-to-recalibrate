@@ -1,0 +1,13 @@
+group,threshold,tau,n_windows,n_pos,alarm_rate,recall,precision,F1,recall_retention,neg_alarm_rate
+13th+Billy (primary),frozen,0.7083,2622,1159,0.0503,0.0889,0.7803,0.1596,1.0,0.0198
+13th+Billy (primary),corridor,0.8532,2622,1159,0.0347,0.0587,0.7473,0.1088,0.66,0.0157
+13th+Billy (primary),pooled routes,1.0758,2622,1159,0.0065,0.0147,1.0,0.0289,0.165,0.0
+13th,frozen,0.7083,1204,566,0.0449,0.0707,0.7407,0.129,1.0,0.0219
+13th,corridor,0.8532,1204,566,0.0365,0.0565,0.7273,0.1049,0.8,0.0188
+13th,pooled routes,1.0758,1204,566,0.0,0.0,,0.0,0.0,0.0
+Billy,frozen,0.7083,1418,593,0.055,0.1062,0.8077,0.1878,1.0,0.0182
+Billy,corridor,0.8532,1418,593,0.0331,0.0607,0.766,0.1125,0.571,0.0133
+Billy,pooled routes,1.0758,1418,593,0.012,0.0287,1.0,0.0557,0.27,0.0
+"N St (secondary, overlap)",frozen,0.7083,1257,231,0.0907,0.2381,0.4825,0.3188,1.0,0.0575
+"N St (secondary, overlap)",corridor,0.8532,1257,231,0.0398,0.1126,0.52,0.1851,0.473,0.0234
+"N St (secondary, overlap)",pooled routes,1.0758,1257,231,0.0,0.0,,0.0,0.0,0.0

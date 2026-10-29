@@ -65,10 +65,15 @@ The Ravenel Bridge ride is the raw 105 Hz Sensor Logger export, reduced to
   `code/protocol_ablation.py`).
 - The Columbia repeated-pass test (`code/aic2_columbia.py`; the pre-specified
   corridor rule and its logged deviations are in Supplementary Section S12).
+- The comparison of corridor and other-route calibration (`code/aic2_corridor_vs_routes.py`,
+  Supplementary Section S13).
 - The spatial-repeatability analysis (`code/aic2_chainage*.py`), from the
   `chainage_m` and `offset_m` columns.
 
 **Not included:**
+- The annotated rides behind the detection check (`code/aic2_detection_retention.py`,
+  Supplementary Section S14), which belong to the earlier VQTransAE dataset; the script and its
+  output table (`results/DET_retention.csv`) are included.
 - The study-area and Charleston satellite maps, which need raw coordinates.
 - The video-annotation labels behind the PR-AUC comparison (Supplementary
   Section S7), which belong to the earlier VQTransAE dataset.
