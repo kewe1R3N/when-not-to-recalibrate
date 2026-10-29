@@ -215,7 +215,7 @@ def figure():
     cols = {"R2a": "#E69F00", "R2b": "#56B4E9"}
     for k in ("R2a", "R2b"):
         f = R[k][1]
-        ax.plot(f.Longitude, O.merc_y(f.Latitude), color=cols[k], lw=1.0, alpha=0.9, label=f"pass {k}")
+        ax.plot(f.Longitude, O.merc_y(f.Latitude), color=cols[k], lw=1.0, alpha=0.9, label=f"ride {k}")
     for name, (line, mA, mB, info) in cor.items():
         f = R["R2a"][1][mA]
         ax.scatter(f.Longitude, O.merc_y(f.Latitude), s=4, color="white", zorder=3)
@@ -226,7 +226,7 @@ def figure():
     ax.scatter([], [], s=10, color="white", label="co-primary corridors (Sumter St, Main St)")
     ax.set_xlim(lo0, lo1); ax.set_ylim(O.merc_y(la0), O.merc_y(la1)); ax.set_aspect("equal")
     ax.set_xticks([]); ax.set_yticks([]); ax.legend(loc="lower left", fontsize=7.5, framealpha=0.88)
-    ax.set_title("(a) Columbia repeated passes", fontsize=10, loc="left")
+    ax.set_title("(a) Columbia repeated rides", fontsize=10, loc="left")
     ax = axes[1]
     m = X.A.load_model(X.CKPT, dev)
     src, _ = X.load_xyz(str(X.IPHONE / "summer" / "Nst.csv"))
@@ -240,7 +240,7 @@ def figure():
         _, s, _ = O.project(xy(f.Latitude.values, f.Longitude.values), line)
         sw = np.array([s[i * X.STEP:i * X.STEP + X.WIN].mean() for i in range(n)])
         ex = 100 * np.mean(sm[w] > fr["tau"])
-        ax.plot(sw[w], sm[w], ".", ms=3, color=cols[k], label=f"pass {k}: {w.sum()} windows, {ex:.1f}% above")
+        ax.plot(sw[w], sm[w], ".", ms=3, color=cols[k], label=f"ride {k}: {w.sum()} windows, {ex:.1f}% above")
     ax.axhline(fr["tau"], color="#D55E00", ls="--", lw=1.2, label="frozen Lincoln threshold")
     ax.set_xlabel("Chainage along Main St (m)"); ax.set_ylabel(r"Deployed score $\tilde s_t$")
     ax.set_ylim(0.1, 1.18); ax.legend(fontsize=8, frameon=False, loc="upper left", ncol=1)
