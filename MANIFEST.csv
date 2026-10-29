@@ -44,3 +44,6 @@ data/charleston_citadel_iphone/segment_19.csv,2010
 data/charleston_citadel_iphone/segment_20.csv,872
 data/charleston_ravenel_android/TotalAcceleration.csv,66417
 data/charleston_ravenel_android/Gravity.csv,66417
+data/columbia_iphone/R1.csv,7499
+data/columbia_iphone/R2a.csv,7418
+data/columbia_iphone/R2b.csv,6908

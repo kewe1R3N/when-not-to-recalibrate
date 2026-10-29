@@ -14,6 +14,7 @@ data/
   lincoln_android/{11th,16th,Nst,billy}.csv
   charleston_citadel_iphone/segment_01..20.csv
   charleston_ravenel_android/{TotalAcceleration,Gravity}.csv
+  columbia_iphone/{R1,R2a,R2b}.csv
 corridors.csv        OpenStreetMap node IDs that fix each corridor's ends
 MANIFEST.csv         every data file and its row count
 results/             result tables behind the manuscript and supplement
@@ -41,8 +42,11 @@ Instead, each row of a ride file carries:
 | `offset_m` | analysed corridors only: signed lateral offset from the mapped line (m) |
 | `in_corridor` | analysed corridors only: 1 if the row lies inside the corridor used in the paper |
 
-The analysed corridors are N St in Lincoln (`Nst.csv`, all campaigns and Android)
-and East Bay Street in Charleston (segments 3, 6, 12, and 16).
+The analysed corridors are N St in Lincoln (`Nst.csv`, all campaigns and Android),
+East Bay Street in Charleston (segments 3, 6, 12, and 16), and Main Street and
+Sumter Street in Columbia (passes R2a and R2b; columns prefixed `main_` and
+`sumter_`). Columbia R2a and R2b are two separate rides of one campus loop,
+15 minutes apart in the same direction; R1 is a different loop.
 `corridors.csv` gives the OSM node IDs at each corridor's ends, so the chainage
 axes can be rebuilt from OpenStreetMap. The N St axis uses the principal axis of
 the N Street roadway with its origin at node 134968191; the East Bay axis runs
@@ -59,6 +63,8 @@ The Ravenel Bridge ride is the raw 105 Hz Sensor Logger export, reduced to
 - The fault-injection and ablation results, by re-injecting the six faults
   into `lincoln_iphone/2024-05/Nst.csv` (`code/aic2_fault_injection.py`,
   `code/protocol_ablation.py`).
+- The Columbia repeated-pass test (`code/aic2_columbia.py`; the pre-specified
+  corridor rule and its logged deviations are in Supplementary Section S12).
 - The spatial-repeatability analysis (`code/aic2_chainage*.py`), from the
   `chainage_m` and `offset_m` columns.
 

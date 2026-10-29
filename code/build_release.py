@@ -127,7 +127,39 @@ def charleston(man):
     return corr
 
 
-def corridors(corr, e1):
+def columbia(man):
+    import aic2_columbia as CO
+    nodes, ways = CO.load_osm()
+    R = {k: CO.load(k)[1] for k in CO.RIDES}
+    extra = {}
+    for tag, name, ends in [("main", "Main Street", ("113980212", "2695777079")),
+                            ("sumter", "Sumter Street", ("4802607678", "114023465"))]:
+        ch, line = CO.street_line(nodes, ways, name, *ends)
+        ids, xs_s, nm = CO.xs_on(nodes, ways, name, ch, line)
+        mA, mB, info, _, _ = CO.masks(R["R2a"], R["R2b"], line, xs_s, ids)
+        for k, mk in (("R2a", mA), ("R2b", mB)):
+            _, sv, ov = O.project(CO.xy(R[k].Latitude.values, R[k].Longitude.values), line)
+            extra.setdefault(k, {}).update({f"{tag}_chainage_m": sv, f"{tag}_offset_m": ov, f"{tag}_in_corridor": mk.astype(int)})
+        extra[tag] = (name, info)
+    for k in CO.RIDES:
+        df = R[k]
+        lat = pd.to_numeric(df["Latitude"], errors="coerce").values
+        lon = pd.to_numeric(df["Longitude"], errors="coerce").values
+        out = pd.DataFrame({"t_s": rel_time(df)})
+        for c in ("X", "Y", "Z"):
+            out[c] = pd.to_numeric(df[c], errors="coerce").values
+        out["gps_fix"], out["along_track_m"] = haversine_track(lat, lon)
+        for c, v in extra.get(k, {}).items():
+            out[c] = v
+        f = OUT / "data" / "columbia_iphone" / f"{k}.csv"
+        f.parent.mkdir(parents=True, exist_ok=True)
+        out.round(6).to_csv(f, index=False); man.append((f, len(out)))
+    return [dict(corridor=f"Columbia {extra[t][0]} (co-primary)", street=extra[t][0], from_node=extra[t][1][0],
+                 to_node=extra[t][1][1], length_m=extra[t][1][2], used_by=f"columbia_iphone/R2a.csv, R2b.csv ({t}_* columns)")
+            for t in ("main", "sumter")]
+
+
+def corridors(corr, e1, more=()):
     rows = [dict(corridor="Lincoln N St (reference)", street="N Street",
                  from_node=C.N_S11, to_node=C.N_S21, length_m=round(e1),
                  used_by="lincoln_iphone/*/Nst.csv, lincoln_android/Nst.csv"),
@@ -137,6 +169,7 @@ def corridors(corr, e1):
             dict(corridor="Charleston segments 3/12", street="East Bay Street",
                  from_node=corr[(3, 12)][0], to_node=corr[(3, 12)][1], length_m=corr[(3, 12)][2],
                  used_by="segment_03.csv, segment_12.csv")]
+    rows += list(more)
     pd.DataFrame(rows).to_csv(OUT / "corridors.csv", index=False)
     return rows
 
@@ -174,20 +207,22 @@ def audit():
         cols = pd.read_csv(p, nrows=0).columns
         hits += [(str(p), c) for c in cols if COORD_COLS.search(str(c))]
         txt = p.read_text()[:200000]
-        if re.search(r"\b(40\.8[0-9]{3,}|32\.7[0-9]{3,}|-96\.7[0-9]{3,}|-79\.9[0-9]{3,})", txt):
+        if re.search(r"\b(40\.8[0-9]{3,}|32\.7[0-9]{3,}|33\.9[0-9]{3,}|-96\.7[0-9]{3,}|-79\.9[0-9]{3,}|-81\.0[0-9]{3,})", txt):
             hits.append((str(p), "coordinate-like value"))
     return hits
 
 
 if __name__ == "__main__":
-    if OUT.exists():
-        shutil.rmtree(OUT)
+    for sub in ("data", "results", "code", "checkpoint"):          # keep .git, README, LICENSE
+        if (OUT / sub).exists():
+            shutil.rmtree(OUT / sub)
     (OUT / "data").mkdir(parents=True)
     ch, e0, e1 = C.axis()
     man = []
     lincoln(ch, e1, man)
     corr = charleston(man)
-    rows = corridors(corr, e1)
+    col = columbia(man)
+    rows = corridors(corr, e1, col)
     dropped = results()
     code()
     pd.DataFrame([(str(f.relative_to(OUT)), n) for f, n in man], columns=["file", "rows"]).to_csv(

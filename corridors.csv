@@ -2,3 +2,5 @@ corridor,street,from_node,to_node,length_m,used_by
 Lincoln N St (reference),N Street,134968191,134968247,1255,"lincoln_iphone/*/Nst.csv, lincoln_android/Nst.csv"
 Charleston segments 6/16,East Bay Street,440922351,447972413,709,"segment_06.csv, segment_16.csv"
 Charleston segments 3/12,East Bay Street,440793623,440852630,332,"segment_03.csv, segment_12.csv"
+Columbia Main Street (co-primary),Main Street,4993320630,2695777079,478,"columbia_iphone/R2a.csv, R2b.csv (main_* columns)"
+Columbia Sumter Street (co-primary),Sumter Street,6236360691,113983500,478,"columbia_iphone/R2a.csv, R2b.csv (sumter_* columns)"
