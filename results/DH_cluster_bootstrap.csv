@@ -1,0 +1,9 @@
+cluster,n_clusters,contrast,mean,lo,hi
+street,12,CER-only - Always,1.59,-0.86,3.54
+street,12,Full - Always,1.73,-0.68,3.69
+street,12,CER-only - Never,-0.45,-1.59,-0.06
+street,12,Full - Never,-0.32,-1.44,0.0
+stretch,35,CER-only - Always,1.59,-0.05,3.64
+stretch,35,Full - Always,1.73,0.08,3.77
+stretch,35,CER-only - Never,-0.45,-0.98,-0.09
+stretch,35,Full - Never,-0.32,-0.78,0.0
