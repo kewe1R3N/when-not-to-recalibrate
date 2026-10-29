@@ -1,0 +1,13 @@
+set,rule,mean_dev_B,harmful_accepted,harmful,beneficial_kept,beneficial
+original 10,Always,4.47,2,2,0,2
+original 10,CER-only (primary),5.1,0,2,1,2
+original 10,Full (primary),5.16,0,2,2,2
+original 10,"CER-only, strict refusal",4.38,1,2,0,2
+original 10,"Full, strict refusal",4.27,0,2,1,2
+original 10,"Full, JS limit 0.045",5.1,0,2,1,2
+all 60,Always,4.75,6,6,0,18
+all 60,CER-only (primary),6.34,2,6,10,18
+all 60,Full (primary),6.48,2,6,13,18
+all 60,"CER-only, strict refusal",4.44,3,6,0,18
+all 60,"Full, strict refusal",4.68,2,6,4,18
+all 60,"Full, JS limit 0.045",6.47,2,6,12,18
