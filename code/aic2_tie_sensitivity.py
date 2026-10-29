@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """POST HOC sensitivity (after the decision-split and Citadel Android results were known):
 (1) tie handling: keep the incumbent only on a strict refusal (candidate deviation above the incumbent's on the
-    decision half), so ties go to the candidate; (2) JS limit rounded up to 0.045. Uses DS_/CA_ result tables only."""
+    decision half), so ties go to the candidate; (2) JS limit rounded up to 0.045; (3) the audit-size row of Table 2 applied to the
+decision half (fewer than 99 windows -> too small to judge, incumbent kept). Uses DS_/CA_ result tables only."""
 import numpy as np, pandas as pd
 import aic2_exp as X
 
@@ -24,7 +25,9 @@ RJ = np.array([rho_js(r) for r in d.itertuples()])
 hold45 = (RJ[:, 0] < 0.80) | (RJ[:, 1] > 0.045)
 rules = {"Always": pd.Series(True, index=d.index), "CER-only (primary)": d.CERonly_accepts.astype(bool),
          "Full (primary)": d.Full_accepts.astype(bool), "CER-only, strict refusal": strict,
-         "Full, strict refusal": strict & ~d.hold.astype(bool), "Full, JS limit 0.045": d.CERonly_accepts.astype(bool) & ~hold45}
+         "Full, strict refusal": strict & ~d.hold.astype(bool), "Full, JS limit 0.045": d.CERonly_accepts.astype(bool) & ~hold45,
+         "CER-only, decision half >= 99": d.CERonly_accepts.astype(bool) & (d.n_A >= 99),
+         "Full, decision half >= 99": d.Full_accepts.astype(bool) & (d.n_A >= 99)}
 u = d.update_on_B; rows = []
 for sub, m in [("original 10", d.set == "original"), ("all 60", d.index >= 0)]:
     for k, acc in rules.items():
