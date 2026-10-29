@@ -1,0 +1,11 @@
+context,n_cal,n_A,n_B,CER_A_frozen,CER_A_cand,CER_B_frozen,CER_B_cand,dB_frozen,dB_cand,update_on_B,CERonly_accepts,hold,Full_accepts,dev_B_Never,dev_B_Always,dev_B_CER-only,dev_B_Full,dev_B_Oracle
+Oct,358,167,167,0.0958,0.0,0.0,0.0,1.0,1.0,neutral,True,False,True,1.0,1.0,1.0,1.0,1.0
+Nov-Dec,492,234,234,0.0556,0.0,0.0256,0.0,1.56,1.0,beneficial,True,True,False,1.56,1.0,1.0,1.56,1.0
+Jan,507,241,242,0.0788,0.0332,0.0,0.0,1.0,1.0,neutral,True,False,True,1.0,1.0,1.0,1.0,1.0
+Android,506,241,241,0.0954,0.1037,0.0,0.029,1.0,1.9,harmful,False,False,False,1.0,1.9,1.0,1.0,1.0
+6->16,357,191,192,0.0,0.0,0.1094,0.0,9.94,1.0,beneficial,False,False,False,9.94,1.0,9.94,9.94,1.0
+16->6,407,166,167,0.1506,0.0783,0.0,0.0,1.0,1.0,neutral,True,False,True,1.0,1.0,1.0,1.0,1.0
+3->12,168,58,58,0.0,0.0,0.2414,0.2414,23.14,23.14,neutral,False,False,False,23.14,23.14,23.14,23.14,23.14
+12->3,140,72,72,0.0,0.0,0.0,0.0,1.0,1.0,neutral,False,False,False,1.0,1.0,1.0,1.0,1.0
+Main R2a->R2b,258,126,126,0.0,0.0,0.0,0.0,1.0,1.0,neutral,False,True,False,1.0,1.0,1.0,1.0,1.0
+Main R2b->R2a,276,117,117,0.4188,0.4188,0.1197,0.1368,10.97,12.68,harmful,False,True,False,10.97,12.68,10.97,10.97,10.97
